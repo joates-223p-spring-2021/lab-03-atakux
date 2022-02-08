@@ -1,16 +1,44 @@
 # -*- coding: utf-8 -*-
 """
-
-johnwoates
+angela deleo
 CPSC 223P-01
-Thu Jan 28, 2021
-joates@fullerton.edu
-
+Tue Jan 08, 2022
+atakux707@csu.fullerton.edu
 """
 
+#the lists
 fruits = ["grape", "mango", "nectarine", "pineapple", "banana", 
           "apple", "orange", "pear", "strawberry", "avocado"]
 
 vegetables = ["zucchini", "asparagus", "kale", "spinach", "broccoli",
               "celery", "beets", "bok choy", "brussels sprouts", "arugula"]
 
+
+
+#combine the fruits and vegetables
+combinedList = fruits + vegetables
+length = len(combinedList)
+
+print("There are", length, "elements in the combined list")
+
+
+
+#sorted
+sortedList = sorted(combinedList)
+
+
+
+#prints the sorted list on separate lines
+for produce in sortedList:
+    print(produce)
+
+
+
+#reverse the sorted list by using a swapping method
+for produce in range(int(length / 2)):
+    i = sortedList[produce]
+    sortedList[produce] = sortedList[length - produce - 1]
+    sortedList[length - produce - 1] = i 
+
+#print the reversed list
+print(sortedList)
