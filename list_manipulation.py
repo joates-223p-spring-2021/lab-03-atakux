@@ -33,12 +33,13 @@ for produce in sortedList:
     print(produce)
 
 
+#make new list
+reversedList = []
 
 #reverse the sorted list by using a swapping method
-for produce in range(int(length / 2)):
-    i = sortedList[produce]
-    sortedList[produce] = sortedList[length - produce - 1]
-    sortedList[length - produce - 1] = i 
+for produce in range(len(sortedList) - 1, -1, -1):
+    #append the list
+    reversedList.append(sortedList[produce])
 
-#print the reversed list
-print(sortedList)
+#print reversed list
+print(reversedList)
