@@ -27,10 +27,13 @@ print("There are", length, "elements in the combined list")
 sortedList = sorted(combinedList)
 
 
+#the letter n
+letterN = "n"
 
 #prints the sorted list on separate lines
 for produce in sortedList:
-    print(produce)
+    if produce <= letterN:
+        print(produce)    
 
 
 #make new list
